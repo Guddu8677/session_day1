@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our university</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #212121;
+            color: #fff;
+            padding: 20px;
+          
+        }
+
+        header {
+            text-align: center;
+            background-color: white;
+            color: green;
+            padding: 15px;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        
+            margin-top: 70px;
+        }
+
+        form button:hover {
+            background-color: blue;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 300px;
+            color: yellow;
+            align-content:baseline;
+          
+        }
+        form footer:hover{
+
+            background-color: blue;
+        }
+
+        #from-server{
+
+            text-shadow: #fff;
+             text-align: center;
+             margin-top: 40px;
+             
+
+        }
+
+
+        
+
+        #about{
+            color: lightcoral;
+        }
+        #contact{
+            color: aquamarine;
+        }
+
+        .ok{
+          background-color: white;
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>This  is our university</h1>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to our university. We offer a wide range of programs to help you excel academically and professionally.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="from-server">
+            <input type="text" id="name" placeholder=" Enter Your Name" required>
+            <input type="email" id="email" placeholder=" Enter Email" required>
+            <textarea id="message" placeholder=" Write Your Message" required></textarea>
+            <button  class="ok" type="submit"><b>Send Message</b></button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Lovley Professional university punjab phagwara</p>
+    </footer>
+
+    <script>
+     
+        document.getElementById('from-server').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill in all fields!');
+            } else {
+                alert('Thank you for your message!');
+                document.getElementById('contact-form').reset(); 
+            }
+        });
+    </script>
+</body>
+</html>
